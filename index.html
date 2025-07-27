@@ -1,56 +1,33 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moje Raspberry Pi</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <title>Nedrago Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
 </head>
-<body class="bg-white text-gray-800 font-sans">
 
-<!-- 🧭 Nawigacja -->
-<header class="bg-red-600 text-white">
-  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <h1 class="text-xl font-bold">MojePi</h1>
-    <nav class="space-x-4">
-      <a href="#" class="hover:underline">Produkty</a>
-      <a href="#" class="hover:underline">Dokumentacja</a>
-      <a href="#" class="hover:underline">Blog</a>
-      <a href="#" class="hover:underline">Kontakt</a>
+<body>
+  <header class="header">
+    <a href="#" class="logo">NEDRAWEB</a>
+    <nav class="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#training">Training</a>
+      <a href="#stuff">Stuff</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<!-- 🏠 Sekcja główna -->
-<section class="bg-gray-100 py-16">
-  <div class="container mx-auto px-4 text-center">
-    <h2 class="text-4xl font-bold mb-4">Witaj w Moim Raspberry Pi Labie</h2>
-    <p class="text-lg text-gray-700 mb-6">Poznaj moje projekty, poradniki i urządzenia</p>
-    <a href="#produkty" class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700">Zobacz produkty</a>
-  </div>
-</section>
-
-<!-- 🧱 Produkty -->
-<section id="produkty" class="py-16">
-  <div class="container mx-auto px-4">
-    <h3 class="text-2xl font-bold mb-8 text-center">Produkty</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-white shadow-md rounded-xl p-4">
-        <img src="/assets/images/pi4.jpg" alt="Pi 4" class="w-full rounded mb-4">
-        <h4 class="font-bold text-lg">Raspberry Pi 4</h4>
-        <p class="text-sm text-gray-600">Mocny SBC do wszystkiego</p>
-      </div>
-      <!-- dodaj kolejne karty -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <h3>Mi nombre es</h3>
+      <h1>Simon Zorro</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at aut commodi cumque delectus deleniti dolores
+        expedita illum incidunt ipsam itaque iusto, laboriosam provident quas qui reiciendis, tenetur unde veritatis!</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 📞 Kontakt -->
-<footer class="bg-gray-900 text-white py-8">
-  <div class="container mx-auto px-4 text-center">
-    <p>© 2025 MojePi. Wszystkie prawa zastrzeżone.</p>
-  </div>
-</footer>
 
 </body>
 </html>
