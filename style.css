@@ -27,7 +27,6 @@ html {
 body {
   background: var(--bg-color);
   color: var(--text-color);
-
 }
 
 .header {
@@ -40,6 +39,7 @@ body {
   display: flex;
   align-items: center;
   z-index: 100;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 2);
 }
 
 .logo {
@@ -51,36 +51,77 @@ body {
 }
 
 .navbar a {
-  position: relative;
-  font-size: 1.7rem;
-  color: var(--white-color);
+  background-color: var(--white-color);
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border-radius: 20px;
   font-weight: 500;
-  margin-right: 3.5rem;
+  transition: background-color 0.3s;
+  margin-right: 1rem;
+  display: inline-block;
+  white-space: nowrap;
 }
 
-.navbar a.active::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 100%;
-  height: .2rem;
-  background: var(--white-color);
+.navbar a.active {
+  background-color: var(--text-color);  /* slightly darker green */
+  color: var(--white-color);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a:hover {
+  opacity: 0.8;
+}
+
+#darkMode {
+  font-size: 2.5rem;
+  cursor: pointer;
+  margin-left: 1rem;
 }
 
 section {
   min-height: 100vh;
-  padding:10rem 7% 2 rem;
+  padding:10rem 7% 2rem;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 30px solid white; /* this defines the triangle color */
 }
 
 .home {
   display: flex;
-  margin-left: 60%;
   align-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 10rem 7% 2rem;
+}
+
+.home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;  /* podstawa przy prawej krawędzi */
+  width: 50% ; /* podstawa trójkąta */
+  height: 100%; /* wysokość trójkąta */
+  background: var(--white-color);
+  clip-path: polygon(
+    100% 0%,
+    100% 100%,
+    0% 50%
+  );
+  z-index: 0;
 }
 
 .home .home-content {
   max-width: 44rem;
+  margin-left: 75%;
+  position: relative;
+  z-index: 2;
 }
 
 .home-content h3 {
@@ -97,3 +138,42 @@ section {
 .home-content p {
   font-size: 2rem;
 }
+
+.home-content .media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: .2rem solid var(--main-color);
+  border-radius: 10%;
+  box-shadow: 0 .2rem .5rem var(--shadow-color);
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin: 2.5rem 1.5rem 3rem 0;
+  transition: .3s ease;
+}
+
+.home-content .media a:hover {
+  background: var(--main-color);
+  color: var(--white-color);
+}
+
+.button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: .6rem;
+  box-shadow: 0 0 .5rem var(--shadow-color);
+  font-size: 2rem;
+  background-color: var(--text-color);
+  color: var(--white-color);
+  letter-spacing: .1rem;
+  font-weight: 500;
+}
+
+.button:hover {
+  color: var(--main-color);
+}
+
+
